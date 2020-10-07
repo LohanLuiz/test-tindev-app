@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { KeyboardAvoidingView , Platform, View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
 
 import logo from '../assets/logo.png';
 
 export default function Login({ navigation }) {
   function handleLogin() {
+    const [ user, setUser] = useState('');
+
+
     navigation.navigate('Main');
   }
 
