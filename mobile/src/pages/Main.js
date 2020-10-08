@@ -1,6 +1,21 @@
 import React from 'react';
-import { View } from 'react-native';
+import { SafeAreaView, Image, StyleSheet } from 'react-native';
+
+import logo from '../assets/logo.png';
 
 export default function Main() {
-  return <View />
+  return (
+    <SafeAreaView>
+      <Image source={logo} />
+    </SafeAreaView>
+  );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+});
