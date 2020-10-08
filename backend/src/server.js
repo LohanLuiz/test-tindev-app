@@ -8,8 +8,14 @@ const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
-io.on('connection', socket => {
+const connectedUsers = {};
 
+io.on('connection', socket => {
+  const { user } = socket.handshake.query;
+
+  console.log(user, socket.id);
+
+  connectedUsers[user] = socket.id
 });
 
 mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0.oikty.mongodb.net/omnistack8?retryWrites=true&w=majority', {
