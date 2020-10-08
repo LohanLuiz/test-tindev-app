@@ -22,7 +22,7 @@ export default function Main() {
 
         </View>
 
-      <View style={styles.buttonContainer}>
+      <View style={styles.buttonsContainer}>
         <TouchableOpacity style={styles.button}>
           <Image source={dislike} />
         </TouchableOpacity>
@@ -89,5 +89,28 @@ const styles = StyleSheet.create({
     color: '#999',
     marginTop: 5,
     lineHeight: 18,
+  },
+
+  buttonsContainer: {
+    flexDirection: 'row',
+    marginBottom: 30,
+  },
+
+  button: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: '#FFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 20,
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOpacity: 0.05,
+    shadowRadius: 2,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
   },
 });
