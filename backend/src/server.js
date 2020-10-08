@@ -9,7 +9,7 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
 io.on('connection', socket => {
-  console.log('Nova conexão', socket.id);
+
 });
 
 mongoose.connect('mongodb+srv://omnistack:omnistack@cluster0.oikty.mongodb.net/omnistack8?retryWrites=true&w=majority', {
